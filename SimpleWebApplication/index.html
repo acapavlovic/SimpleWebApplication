@@ -8,7 +8,20 @@
 </head>
 <body ng-app="myApp">
     <div ng-controller="myController">
-        <h1>{{hello}}</h1>
+        <table>
+            <tr>
+                <th>Id</th>
+                <th>First name</th>
+                <th>Last name</th>
+                <th>Job</th>
+            </tr>
+            <tr ng-repeat="employee in employees">
+                <td>{{employee.Id}}</td>
+                <td>{{employee.FirstName}}</td>
+                <td>{{employee.LastName}}</td>
+                <td>{{employee.Job}}</td>
+            </tr>
+        </table>
     </div>
 </body>
 </html>
