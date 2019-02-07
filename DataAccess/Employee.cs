@@ -6,7 +6,7 @@ namespace DataAccess
     [Table("Employee")]
     public partial class Employee
     {
-        [DatabaseGenerated(DatabaseGeneratedOption.None)] //here set Identity if you want to set Id automatically 
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)] //here set Identity if you want to set Id automatically 
         public int Id { get; set; }
 
         [StringLength(20)]

@@ -41,10 +41,10 @@ namespace WebApi.Controllers
         }
 
         // PUT api/values/5
-        public IHttpActionResult Put(int id, Employee value)
+        public void Put(int id, Employee value)
         {
-            if (!ModelState.IsValid)
-                return BadRequest("Something failed!");
+            //if (!ModelState.IsValid)
+            //    return BadRequest("Something failed!");
 
             using (var _context = new EmployeeModel())
             {
@@ -56,7 +56,7 @@ namespace WebApi.Controllers
                 _context.SaveChanges();
             }
 
-            return Ok();
+            //return Ok();
         }
 
         // DELETE api/values/5
